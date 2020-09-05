@@ -32,8 +32,8 @@
 "post-processors": [
 {
     "type": "amazon-import",
-    "access_key": "AKIA5XSUFJIVUECBRH5Y",
-    "secret_key": "N6N+bKT8jAsNobloBL3xwWkJkVjkIIpI1KPqy3hn",
+    "access_key": "your-public-key",
+    "secret_key": "your-private-key",
     "region": "us-gov-west-1",
     "s3_bucket_name": "onpremgovimport"
     }
