@@ -58,6 +58,22 @@ This packer template will allow you to convert the Cisco Smart Software Manager 
 }
 ```
 
-### Download your desired SSM On-Prem Version (https://software.cisco.com/download/home/286285506/type)
+### Build Set-up
 
-1. Save the ISO to your desired location and update the "iso_url" with the path to the ISO
+1. Download your desired SSM On-Prem Version (https://software.cisco.com/download/home/286285506/type)
+2. Save the ISO to your desired location and update the "iso_url" with the path to the ISO
+3. Copy the md5 checksum and update in "iso_checksum"
+4. Update AWS Region
+5. Update AWS S3 Bucket Name
+
+### Run Packer Build
+
+```
+packer build \
+    -var 'aws_access_key=your_access_key' \
+    -var 'aws_secret_key=your_secret_key' \
+    onprem-import.json
+ ```
+ 
+ 
+
