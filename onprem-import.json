@@ -2,7 +2,7 @@
     "builders": [
       {
         "boot_command": [
-          "<enter><wait90s><tab><tab><tab><tab><tab><tab><tab><tab><tab>192.192.192.2<tab>255.255.255.0<tab>192.192.192.1<tab><tab>8.8.8.8<tab><tab><enter><wait5s><tab><tab>tab><tab><enter><wait20m>"
+          "<enter><wait90s><tab><tab><tab><tab><tab><tab><tab><tab><tab>192.192.192.2<tab>255.255.255.0<tab>192.192.192.1<tab><tab>8.8.8.8<tab><tab><enter><wait5s><tab><tab>tab><tab><enter><wait30m>"
         ],
         "boot_wait": "20s",
         "communicator": "none",
