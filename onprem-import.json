@@ -12,9 +12,8 @@
         "cpus": "2",
         "memory": "8192",
         "guest_os_type": "Linux_64",
-        "iso_checksum": "6a32760bf73e5ee793346c73da5ba94b",
+        "iso_checksum": "md5:6a32760bf73e5ee793346c73da5ba94b",
         "iso_url": "file:/Users/schkenne/Downloads/SSM_On-Prem_8-202006(1).iso",
-        "iso_target_path": "/Users/schkenne/Documents",
         "output_directory": "builds",
         "shutdown_command": "",
         "type": "virtualbox-iso",
@@ -22,11 +21,7 @@
         "format": "ova"
       }
     ],
-   "variables": {
-      "iso_checksum": "6a32760bf73e5ee793346c73da5ba94b",
-      "iso_url": "file:/Users/schkenne/Downloads/SSM_On-Prem_8-202006(1).iso",
-      "non_gui": "false",
-      "type": "md5",
+    "variables": {
       "aws_access_key": "",
       "aws_secret_key": ""
     },
