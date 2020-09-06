@@ -74,6 +74,8 @@ packer build \
     -var 'aws_secret_key=your_secret_key' \
     onprem-import.json
  ```
- 
+
+#### Please Note:  The conversion/import process may take several hours depending on your compute, upload speeds, and download speeds.  Your machine will need to stay awake until the OVA has been successfully copied to your S3 bucket and an import-ami id has been generated.  
+
  
 
