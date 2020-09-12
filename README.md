@@ -6,6 +6,7 @@ This packer template will allow you to convert the Cisco Smart Software Manager 
 
 - Install VirtualBox (https://www.virtualbox.org/wiki/Downloads)
 - Install Packer (https://learn.hashicorp.com/tutorials/packer/getting-started-install)
+- Install AWS CLI (https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-install.html)
 
 ## AWS Set-up
 
@@ -27,6 +28,11 @@ This packer template will allow you to convert the Cisco Smart Software Manager 
    ]
 }
 ```
+AWS CLI Command to create the service role:
+```
+aws iam create-role --role-name vmimport --assume-role-policy-document "file://trust-policy.json"
+```
+
 2. Create a Role/Policy for Import
 ```
 {
@@ -56,6 +62,10 @@ This packer template will allow you to convert the Cisco Smart Software Manager 
       }
    ]
 }
+```
+AWS CLI command to create role:
+```
+aws iam put-role-policy --role-name vmimport --policy-name vmimport --policy-document "file://role-policy.json"
 ```
 
 ### Build Set-up
