@@ -1,0 +1,38 @@
+{
+    "builders": [
+      {
+        "boot_command": [
+          "<enter><wait90s><tab><tab><tab><tab><tab><tab><tab><tab><tab>192.192.192.2<tab>255.255.255.0<tab>192.192.192.1<tab><tab>8.8.8.8<tab><tab><enter><wait5s><tab><tab>tab><tab><enter><wait30m>"
+        ],
+        "boot_wait": "20s",
+        "communicator": "none",
+        "guest_additions_mode": "disable",
+        "virtualbox_version_file": "",
+        "disk_size": "108000",
+        "cpus": "2",
+        "memory": "8192",
+        "guest_os_type": "Linux_64",
+        "iso_checksum": "md5:6a32760bf73e5ee793346c73da5ba94b",
+        "iso_url": "file:/Users/schkenne/Downloads/SSM_On-Prem_8-202006(1).iso",
+        "output_directory": "builds",
+        "shutdown_command": "",
+        "type": "virtualbox-iso",
+        "vm_name": "ssm-onprem",
+        "format": "ova"
+      }
+    ],
+    "variables": {
+      "aws_access_key": "",
+      "aws_secret_key": ""
+    },
+
+"post-processors": [
+{
+    "type": "amazon-import",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "us-gov-west-1",
+    "s3_bucket_name": "onpremgovimport"
+    }
+  ]
+}
